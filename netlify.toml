@@ -1,0 +1,8 @@
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/tiles/:layer/:z/:x/:y.png"
+  to   = "/.netlify/functions/tiles?layer=:layer&z=:z&x=:x&y=:y"
+  status = 200
+  force = true
