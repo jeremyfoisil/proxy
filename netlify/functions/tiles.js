@@ -11,7 +11,7 @@ exports.handler = async (event) => {
     // Optionnel: restreindre à ton site GitHub Pages
     const referer = event.headers.referer || "";
     const allowed = [
-      "https://jeremyfoisil.github.io/Test_Notion"
+      "https://jeremyfoisil.github.io"
     ].filter(Boolean);
     if (allowed.length && !allowed.some(url => referer.startsWith(url))) {
       return { statusCode: 403, body: "Forbidden" };
